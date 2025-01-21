@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Sports Equipment Rental Program</title>
+</head>
+<body>
+   
+    <h2>List Of Equipment</h2>
+
+    <table style="font-size: 20px;" bgcolor="black" width="800" 
+    height="200"id="editable-table">
+        <tr bgcolor="white">
+            <th width="150">Name of Equipment</th>
+            <th width="150">Number</th>
+            <th width="150">Status</th>
+            
+        </tr>
+        <tr bgcolor="White" align="center">
+            <td>Ball</td>
+            <td>85</td>
+            <td>Available</td>
+            
+        </tr>
+        <tr bgcolor="White" align="center">
+            <td>Helmet</td>
+            <td>65</td>
+            <td>Available</td>
+            
+        </tr>
+        <tr bgcolor="White" align="center">
+            <td>Shirt</td>
+            <td>150</td>
+            <td>Available</td>
+            
+        </tr>
+        <tr bgcolor="White" align="center">
+            <td>Skate Board</td>
+            <td>80</td>
+            <td>Available</td>
+           
+        </tr>
+        
+    </table>
+    <br>
+
+    <hr>
+    <h2><u>Add a equipment</u></h2>
+
+    <script>
+    function updateOutput() {
+      // Get the value from the input box
+      var inputText = document.getElementById("inputBox").value;
+
+      // Check for specific input values and set the output accordingly
+      if (inputText === "Ball") {
+        document.getElementById("utputBox").value = "10$";
+      } else if (inputText === "Helmet") {
+        document.getElementById("utputBox").value = "15$";
+      } else if (inputText === "Shirt") {
+        document.getElementById("utputBox").value = "8$";
+      } else if (inputText === "Skate Board") {
+        document.getElementById("utputBox").value = "20#";
+      } else {
+        document.getElementById("utputBox").value = "";  // Clear output if no match
+      }
+    }
+
+    function resetFields() {
+      // Reset both the input and output fields to empty
+      document.getElementById("inputBox").value = "";
+      document.getElementById("utputBox").value = "";
+    }
+  </script>
+  <label for="inputBox">Name of Equipment:</label><br>
+  <input type="text" id="inputBox" oninput="updateOutput()"><br><br>
+
+  <label for="utputBox">Price:</label><br>
+  <input type="text" id="utputBox" readonly>
+  <style>
+    #utputBox{ text-align: start;
+        width: 80px;
+    }
+  </style>
+  
+  <br><br>
+
+  <button onclick="resetFields()">Reset</button>
+  <hr>
+  <br>
+
+  <h2><u>Rental Equipment</u></h2>
+  <script>
+    function pdateOutput() {
+      // Get the value from the input box
+      var inputText = document.getElementById("nputBox").value;
+
+      // Check for specific input values and set the output accordingly
+      if (inputText === "Ball") {
+        document.getElementById("tputBox").value = "Available";
+      } else if (inputText === "Helmet") {
+        document.getElementById("tputBox").value = "Absence";
+      } else if (inputText === "Shirt") {
+        document.getElementById("tputBox").value = "Available";
+      } else if (inputText === "Skate Board") {
+        document.getElementById("tputBox").value = "Absence";
+      } else {
+        document.getElementById("tputBox").value = "";  // Clear output if no match
+      }
+    }
+
+    function esetFields() {
+      // Reset both the input and output fields to empty
+      document.getElementById("nputBox").value = "";
+      document.getElementById("tputBox").value = "";
+    }
+  </script>
+  <label for="nputBox"> Name of Equipment:</label><br>
+  <input type="text" id="nputBox" oninput="pdateOutput()"><br><br>
+
+  <label for="tputBox">Status:</label><br>
+  <input type="text" id="tputBox" readonly>
+  <style>
+    #tputBox{ text-align: start;
+        width: 80px;
+    }
+  </style>
+  
+  <br><br>
+
+  <button onclick="esetFields()">Reset</button>
+  <hr>
+  <br>
+
+  <div id="rental-form">
+    <label for="customer-name">Your Name:</label>
+    <input type="text" id="customer-name" placeholder="Enter your name" />
+
+    <label for="rental-days">Rental Days:</label>
+    <input type="number" id="rental-days" min="1" />
+
+    <label for="discount">Discount:</label>
+    <input type="text" id="discount"/>
+
+    <label for="is-regular-customer">
+    <input type="checkbox" id="is-regular-customer" />Regular Customer</label>
+
+    <script>
+    function nnn() {
+        document.getElementById("discount").value = "15%";
+    }
+</script>
+    <button onclick="nnn()">Rent Equipment</button>
+    
+  </div>
+  
+</body>
+</html>
